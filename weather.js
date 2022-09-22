@@ -14,7 +14,7 @@ class Weather {
 
     //use geocode API to convert city and state to lat and lon
     async getLatLon(city, state, appid){
-        const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city},${state},US&limit=5&appid=${appid}`);
+        const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city},${state},US&limit=5&appid=${appid}`);
         const data = await response.json()
         .then(data => {
             //log all results from geocode API
